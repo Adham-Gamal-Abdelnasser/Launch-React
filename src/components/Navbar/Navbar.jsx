@@ -1,14 +1,20 @@
-import React from 'react'
+import { HouseIcon, ImagesIcon, InfoIcon, PhoneIcon } from 'lucide-react'
+import React, { useState } from 'react'
+import NavLink from '../NavLink/NavLink'
 
 export default function Navbar() {
+  let [navLinks , setNavLinks] = useState([
+    {name: 'Home', icon: HouseIcon, path: '/home', id: 0},
+    {name: 'About', icon: InfoIcon, path: '/about', id: 1},
+    {name: 'Contact', icon: PhoneIcon, path: '/contact', id: 2},
+    {name: 'Gallery', icon: ImagesIcon, path: '/gallery', id: 3}, 
+  ])
   return (
     <>
       <nav className='relative top-0 start-0 end-0 bg-gray-1 flex justify-around items-center py-4 text-zinc-200 font-main'>
         <h2 className='text-3xl'>Launch<span className='text-blue-600'>R</span></h2>
         <ul className='flex gap-5'>
-          <li><a className='' href="http://">Home</a></li>
-          <li><a className='' href="http://">About</a></li>
-          <li><a className='' href="http://">Contact</a></li>
+          {navLinks.map(link => <NavLink key={link.id} link={link}/>)}
         </ul>
       </nav>
     </>
