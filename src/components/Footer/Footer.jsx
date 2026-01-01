@@ -15,9 +15,9 @@ export default function Footer() {
         <p className="flex justify-center gap-3 my-2 md:my-0 font-main"> {copyRightYear} <span className="text-blue-600">LaunchR</span>. All rights reserved.</p>
         <div className="flex justify-center items-center my-2 md:my-0 gap-5">
             {webLinks.map(link => <SocialLink key={link.id} link={link}></SocialLink>)}
-        </div>
-        <div className="flex justify-center items-center my-2 md:my-0 gap-5">
-            <img src='/src/assets/logo.png' className="w-7" alt="Adham Gamal Logo" />
+            <div className="flex justify-center items-center my-2 md:my-0 gap-5">
+                <img src='/src/assets/logo.png' className="w-7" alt="Adham Gamal Logo" />
+            </div>
         </div>
       </footer>
 
