@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function NavLink({link}) {
+export default function NavigationLink({link}) {
   return (
     <>
         <li>
