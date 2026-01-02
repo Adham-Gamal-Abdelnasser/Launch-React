@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Feature from '../Feature/Feature';
+import Layer from '../Layer/Layer';
 
 export default function Gallery() {
     const [features, setFeatures] = useState([
@@ -17,6 +18,7 @@ export default function Gallery() {
                 {features.map(feature => <Feature key={feature.id} feature={feature}/>)}                
             </div>
         </section>
+        <Layer />
     </>
   )
 }
