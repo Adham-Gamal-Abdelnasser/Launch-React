@@ -10,7 +10,7 @@ export default function Contact() {
     ]);
   return (
     <>
-        <section className="py-24 bg-gray-2">
+        <section className="py-28 bg-gray-2">
             <div className="w-3/4 mx-auto">
                 <form>
                     {inputsData.map(input => <InputField key={input.id} inputDetails={input} />)}
@@ -18,7 +18,7 @@ export default function Contact() {
                 </form>
             </div>
         </section>
-
+ 
     </>
   )
 }
